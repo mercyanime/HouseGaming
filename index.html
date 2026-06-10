@@ -9,249 +9,27 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
         }
 
         body {
-            background-color: #ff4444; /* Fondo rojo principal */
+            background-color: #ff2b2b; /* Fondo rojo como en tu vista */
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            padding: 20px;
         }
 
-        .contenedor-principal {
-            position: relative;
-            width: 1280px;
-            height: 720px;
-            background-color: #ff6b6b; /* Fondo rojo claro */
-            border: 8px solid #ff0000; /* Borde rojo fuerte */
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 0 25px rgba(0,0,0,0.3);
-        }
-
-        /* Título principal */
-        .titulo {
-            position: absolute;
-            top: 30px;
-            left: 40px;
-            color: white;
-            font-size: 32px;
-            font-weight: bold;
-            letter-spacing: 2px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
-        }
-
-        /* Imagen central */
-        .imagen-central {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            height: 90%;
-            object-fit: contain;
-            z-index: 2;
-            filter: drop-shadow(0 0 12px rgba(255,255,255,0.2));
-        }
-
-        /* Reproductor de música */
-        .reproductor {
-            position: absolute;
-            top: 180px;
-            left: 30px;
-            width: 180px;
-            background-color: rgba(255,255,255,0.15);
-            border-radius: 10px;
-            padding: 10px;
-            backdrop-filter: blur(8px);
-            z-index: 3;
-        }
-
-        .reproductor img {
-            width: 100%;
-            border-radius: 6px;
-            margin-bottom: 8px;
-        }
-
-        .controles {
-            display: flex;
-            justify-content: space-around;
-            color: white;
-            font-size: 18px;
-        }
-
-        /* Widget clima y reloj */
-        .widgets {
-            position: absolute;
-            bottom: 120px;
-            left: 30px;
-            display: flex;
-            gap: 15px;
-            z-index: 3;
-        }
-
-        .clima {
-            background-color: #ff6a3c;
-            color: white;
-            width: 80px;
-            height: 80px;
-            border-radius: 8px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            font-weight: bold;
-        }
-
-        .reloj {
-            background-color: #222;
-            color: white;
-            width: 80px;
-            height: 80px;
-            border-radius: 8px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 22px;
-        }
-
-        /* Barra de navegación inferior */
-        .barra-navegacion {
-            position: absolute;
-            bottom: 30px;
-            left: 30px;
-            width: 220px;
-            height: 40px;
-            background-color: #1a1a1a;
-            border-radius: 20px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            color: white;
-            z-index: 3;
-        }
-
-        .icono-activo {
-            color: #ffcc00;
-        }
-
-        /* Panel de inicio de sesión derecho */
-        .panel-login {
-            position: absolute;
-            top: 50%;
-            right: 30px;
-            transform: translateY(-50%);
-            width: 220px;
-            background-color: rgba(20, 20, 40, 0.85);
-            border-radius: 12px;
-            padding: 20px;
-            color: white;
-            text-align: center;
-            backdrop-filter: blur(6px);
-            z-index: 3;
-        }
-
-        .panel-login h2 {
-            font-size: 24px;
-            margin-bottom: 15px;
-            letter-spacing: 1px;
-        }
-
-        .panel-login input {
-            width: 100%;
-            padding: 8px;
-            margin: 6px 0;
-            border: none;
-            border-radius: 4px;
-            background-color: rgba(255,255,255,0.1);
-            color: white;
-        }
-
-        .boton {
-            width: 48%;
-            padding: 6px;
-            margin: 8px 1%;
-            border: none;
-            border-radius: 4px;
-            background-color: #ff4444;
-            color: white;
-            cursor: pointer;
-        }
-
-        .boton:hover {
-            background-color: #ff2222;
-        }
-
-        .enlace {
-            font-size: 12px;
-            margin-top: 8px;
-            opacity: 0.8;
-        }
-
-        .marca-agua {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            color: rgba(255,255,255,0.5);
-            font-size: 10px;
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
         }
     </style>
 </head>
 <body>
 
-    <div class="contenedor-principal">
-        <!-- Título -->
-        <div class="titulo">HOUSE GAMING</div>
-
-        <!-- Imagen principal -->
-        <img src="house gaming.png" alt="House Gaming" class="imagen-central">
-
-        <!-- Reproductor de música -->
-        <div class="reproductor">
-            <img src="https://via.placeholder.com/160x100/ff99cc/ffffff?text=Musica" alt="Portada canción">
-            <div class="controles">
-                <span>♡</span>
-                <span>◀◀</span>
-                <span>⏸</span>
-                <span>▶▶</span>
-                <span>↻</span>
-            </div>
-        </div>
-
-        <!-- Widgets clima y reloj -->
-        <div class="widgets">
-            <div class="clima">
-                <div>☀️ Sunny</div>
-                <div style="font-size:24px">36°</div>
-                <div style="font-size:10px">42° / 28°</div>
-            </div>
-            <div class="reloj">4:30 AM</div>
-        </div>
-
-        <!-- Barra de navegación -->
-        <div class="barra-navegacion">
-            <span>🏠</span>
-            <span>↶</span>
-            <span class="icono-activo">⚙️</span>
-        </div>
-
-        <!-- Panel de inicio de sesión -->
-        <div class="panel-login">
-            <h2>TRAVEL</h2>
-            <p style="font-size:12px; margin-bottom:15px;">We pursue a relaxed gaming experience</p>
-            <input type="text" placeholder="Username">
-            <input type="password" placeholder="Password">
-            <div style="display:flex; flex-wrap:wrap;">
-                <button class="boton">Sign up</button>
-                <button class="boton">Sign in</button>
-            </div>
-            <div class="enlace">Forgot Password?</div>
-        </div>
-
-        <div class="marca-agua">小红书</div>
-    </div>
+    <!-- Solo la imagen, nada más -->
+    <img src="house gaming.png" alt="House Gaming">
 
 </body>
 </html>
