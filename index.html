@@ -10,40 +10,21 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
-            background-color: #ff2222; /* Rojo exterior */
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh; /* Ocupa el 100% de la altura de CUALQUIER pantalla */
-            width: 100vw; /* Ocupa el 100% del ancho de CUALQUIER pantalla */
-            padding: 10px; /* Pequeño margen para que no toque los bordes */
+            min-height: 100vh;
+            width: 100vw;
         }
-
-        .contenedor {
-            width: 95%; /* 95% del ancho de la pantalla actual */
-            height: 95vh; /* 95% de la altura de la pantalla actual */
-            background-color: #ff4444; /* Rojo interior */
-            border: 8px solid #ff0000; /* Borde rojo */
-            border-radius: 16px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-        }
-
         img {
             width: 100%;
             height: 100%;
-            object-fit: contain; /* CLAVE: Se ve COMPLETA, SIN RECORTES, SIN DEFORMARSE */
-            display: block;
+            object-fit: contain;
         }
     </style>
 </head>
 <body>
-    <div class="contenedor">
-        <img src="house gaming.png" alt="House Gaming">
-    </div>
+    <img src="house-gaming.png" alt="House Gaming">
 </body>
 </html>
