@@ -12,23 +12,23 @@
         }
 
         body {
-            background-color: #ff2b2b; /* Fondo rojo como en tu vista */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            /* Elimina cualquier margen o relleno del cuerpo */
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Evita barras de desplazamiento */
         }
 
         img {
-            max-width: 100%;
-            height: auto;
+            width: 100vw;  /* Ancho total de la ventana */
+            height: 100vh; /* Alto total de la ventana */
+            object-fit: cover; /* Hace que la imagen cubra todo sin deformarse */
             display: block;
         }
     </style>
 </head>
 <body>
 
-    <!-- Solo la imagen, nada más -->
+    <!-- Solo la imagen, ocupando toda la pantalla -->
     <img src="house gaming.png" alt="House Gaming">
 
 </body>
