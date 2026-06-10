@@ -7,14 +7,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        menu: ['Montserrat', 'sans-serif'],
-                        firma: ['Dancing Script', 'cursive']
+                        menu: ['Montserrat', 'sans-serif']
                     }
                 }
             }
@@ -22,30 +21,19 @@
     </script>
 </head>
 <body class="m-0 p-0 w-full h-screen overflow-hidden">
-    <!-- Imagen de fondo -->
     <div class="relative w-full h-screen">
-        <img 
-            src="1781057909260.png" 
-            alt="House Gaming" 
-            class="w-full h-full object-cover"
-        >
+        <!-- Solo carga tu imagen -->
+        <img src="1781057909260.png" alt="House Gaming" class="w-full h-full object-cover">
 
-        <!-- Menú superior -->
+        <!-- Solo el menú de arriba -->
         <nav class="absolute top-0 right-0 w-full p-8">
-            <ul class="flex justify-end gap-12 text-white font-menu text-lg md:text-xl font-medium tracking-wider">
-                <li><a href="#" class="hover:opacity-80 transition">Home</a></li>
-                <li><a href="#" class="hover:opacity-80 transition">Juegos</a></li>
-                <li><a href="#" class="hover:opacity-80 transition">Apps</a></li>
-                <li><a href="#" class="hover:opacity-80 transition">Peliculas</a></li>
+            <ul class="flex justify-end gap-12 text-white font-menu text-xl tracking-wider">
+                <li>Home</li>
+                <li>Juegos</li>
+                <li>Apps</li>
+                <li>Peliculas</li>
             </ul>
         </nav>
-
-        <!-- Texto inferior izquierdo -->
-        <div class="absolute bottom-10 left-10">
-            <h1 class="text-white font-firma text-5xl md:text-6xl">
-                House Gaming
-            </h1>
-        </div>
     </div>
 </body>
 </html>
