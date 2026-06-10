@@ -2,7 +2,8 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Esta línea es clave para que funcione en móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>House Gaming</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,15 +20,27 @@
             }
         }
     </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .menu-item {
+                @apply text-white font-medium tracking-wider;
+            }
+        }
+    </style>
 </head>
 <body class="m-0 p-0 w-full h-screen overflow-hidden">
     <div class="relative w-full h-screen">
-        <!-- Solo carga tu imagen -->
-        <img src="1781057909260.png" alt="House Gaming" class="w-full h-full object-cover">
+        <!-- Imagen de fondo -->
+        <img 
+            src="1781057909260.png" 
+            alt="House Gaming" 
+            class="w-full h-full object-cover object-center"
+            loading="lazy"
+        >
 
-        <!-- Solo el menú de arriba -->
-        <nav class="absolute top-0 right-0 w-full p-8">
-            <ul class="flex justify-end gap-12 text-white font-menu text-xl tracking-wider">
+        <!-- Menú adaptable para PC y celular -->
+        <nav class="absolute top-0 right-0 w-full p-4 md:p-8">
+            <ul class="flex flex-wrap justify-end gap-6 md:gap-12 text-base md:text-xl menu-item">
                 <li>Home</li>
                 <li>Juegos</li>
                 <li>Apps</li>
