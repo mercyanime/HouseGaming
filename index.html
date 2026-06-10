@@ -3,48 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diseño Web</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+    <title>House Gaming</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        fondo: '#0f051d',
+                        neon: '#00eeff',
+                        neonRojo: '#ff2d55'
+                    },
+                    fontFamily: {
+                        juego: ['Orbitron', 'sans-serif'],
+                        retro: ['Press Start 2P', 'cursive']
+                    }
+                }
+            }
         }
-
-        body {
-            /* Tamaño total de la página */
-            width: 1534px;
-            height: 960px;
-            /* Fondo oscuro */
-            background-color: #0a0e17;
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Barra lateral rosa */
-        .barra-lateral {
-            width: 40px;
-            height: 100%;
-            background-color: #f52080;
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-
-        /* Recuadro blanco */
-        .recuadro-blanco {
-            width: 280px;
-            height: 220px;
-            background-color: #ffffff;
-            border-radius: 12px; /* Esquinas redondeadas */
-            position: absolute;
-            left: 70px;
-            top: 40px;
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .texto-neon {
+                text-shadow: 0 0 5px #00eeff, 0 0 10px #00eeff, 0 0 20px #00eeff80;
+            }
+            .sombra-neon {
+                box-shadow: 0 0 15px rgba(0, 238, 255, 0.4);
+            }
         }
     </style>
 </head>
-<body>
-    <div class="barra-lateral"></div>
-    <div class="recuadro-blanco"></div>
+<body class="bg-fondo text-white min-h-screen font-juego">
+    <!-- Contenedor principal -->
+    <div class="w-full min-h-screen relative overflow-hidden">
+        <!-- Imagen con el nombre que me diste -->
+        <img 
+            src="1781057909260.png" 
+            alt="House Gaming" 
+            class="w-full h-full object-cover absolute top-0 left-0 z-0"
+        >
+
+        <!-- Capa oscura para leer bien el texto -->
+        <div class="absolute inset-0 bg-black bg-opacity-60 z-10"></div>
+
+        <!-- Contenido visible -->
+        <div class="relative z-20 p-6 md:p-12">
+            <!-- Barra de navegación -->
+            <nav class="flex flex-wrap justify-between items-center mb-12 gap-4">
+                <h2 class="text-2xl md:text-3xl font-bold texto-neon">HOW HOUSE GAMING</h2>
+                <ul class="flex gap-4 md:gap-6 text-sm md:text-base">
+                    <li><a href="#" class="hover:text-neon transition-all duration-300">INICIO</a></li>
+                    <li><a href="#" class="hover:text-neon transition-all duration-300">JUEGOS</a></li>
+                    <li><a href="#" class="hover:text-neon transition-all duration-300">ANIME</a></li>
+                    <li><a href="#" class="hover:text-neon transition-all duration-300">APPS</a></li>
+                </ul>
+            </nav>
+
+            <!-- Título principal -->
+            <div class="mt-20 md:mt-32">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold texto-neon mb-4">
+                    HOUSE GAMING
+                </h1>
+                <p class="text-lg md:text-xl max-w-xl opacity-90">
+                    Tu espacio dedicado al mundo de los videojuegos y entretenimiento
+                </p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
