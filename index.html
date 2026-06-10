@@ -5,73 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>House Gaming</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        fondo: '#0f051d',
-                        neon: '#00eeff',
-                        neonRojo: '#ff2d55'
-                    },
                     fontFamily: {
-                        juego: ['Orbitron', 'sans-serif'],
-                        retro: ['Press Start 2P', 'cursive']
+                        menu: ['Montserrat', 'sans-serif'],
+                        firma: ['Dancing Script', 'cursive']
                     }
                 }
             }
         }
     </script>
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .texto-neon {
-                text-shadow: 0 0 5px #00eeff, 0 0 10px #00eeff, 0 0 20px #00eeff80;
-            }
-            .sombra-neon {
-                box-shadow: 0 0 15px rgba(0, 238, 255, 0.4);
-            }
-        }
-    </style>
 </head>
-<body class="bg-fondo text-white min-h-screen font-juego">
-    <!-- Contenedor principal -->
-    <div class="w-full min-h-screen relative overflow-hidden">
-        <!-- Imagen con el nombre que me diste -->
+<body class="m-0 p-0 w-full h-screen overflow-hidden">
+    <!-- Imagen de fondo -->
+    <div class="relative w-full h-screen">
         <img 
             src="1781057909260.png" 
             alt="House Gaming" 
-            class="w-full h-full object-cover absolute top-0 left-0 z-0"
+            class="w-full h-full object-cover"
         >
 
-        <!-- Capa oscura para leer bien el texto -->
-        <div class="absolute inset-0 bg-black bg-opacity-60 z-10"></div>
+        <!-- Menú superior -->
+        <nav class="absolute top-0 right-0 w-full p-8">
+            <ul class="flex justify-end gap-12 text-white font-menu text-lg md:text-xl font-medium tracking-wider">
+                <li><a href="#" class="hover:opacity-80 transition">Home</a></li>
+                <li><a href="#" class="hover:opacity-80 transition">Juegos</a></li>
+                <li><a href="#" class="hover:opacity-80 transition">Apps</a></li>
+                <li><a href="#" class="hover:opacity-80 transition">Peliculas</a></li>
+            </ul>
+        </nav>
 
-        <!-- Contenido visible -->
-        <div class="relative z-20 p-6 md:p-12">
-            <!-- Barra de navegación -->
-            <nav class="flex flex-wrap justify-between items-center mb-12 gap-4">
-                <h2 class="text-2xl md:text-3xl font-bold texto-neon">HOW HOUSE GAMING</h2>
-                <ul class="flex gap-4 md:gap-6 text-sm md:text-base">
-                    <li><a href="#" class="hover:text-neon transition-all duration-300">INICIO</a></li>
-                    <li><a href="#" class="hover:text-neon transition-all duration-300">JUEGOS</a></li>
-                    <li><a href="#" class="hover:text-neon transition-all duration-300">ANIME</a></li>
-                    <li><a href="#" class="hover:text-neon transition-all duration-300">APPS</a></li>
-                </ul>
-            </nav>
-
-            <!-- Título principal -->
-            <div class="mt-20 md:mt-32">
-                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold texto-neon mb-4">
-                    HOUSE GAMING
-                </h1>
-                <p class="text-lg md:text-xl max-w-xl opacity-90">
-                    Tu espacio dedicado al mundo de los videojuegos y entretenimiento
-                </p>
-            </div>
+        <!-- Texto inferior izquierdo -->
+        <div class="absolute bottom-10 left-10">
+            <h1 class="text-white font-firma text-5xl md:text-6xl">
+                House Gaming
+            </h1>
         </div>
     </div>
 </body>
