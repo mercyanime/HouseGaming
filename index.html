@@ -12,24 +12,38 @@
         }
 
         body {
-            /* Elimina cualquier margen o relleno del cuerpo */
-            margin: 0;
-            padding: 0;
-            overflow: hidden; /* Evita barras de desplazamiento */
+            background-color: #ff2222; /* Color rojo exterior */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .contenedor {
+            width: 90%;
+            max-width: 1280px;
+            height: 720px;
+            background-color: #ff4444; /* Color rojo interior */
+            border: 8px solid #ff0000; /* Borde rojo fuerte */
+            border-radius: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
         }
 
         img {
-            width: 100vw;  /* Ancho total de la ventana */
-            height: 100vh; /* Alto total de la ventana */
-            object-fit: cover; /* Hace que la imagen cubra todo sin deformarse */
-            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Para que no se recorte ni deforme */
         }
     </style>
 </head>
 <body>
 
-    <!-- Solo la imagen, ocupando toda la pantalla -->
-    <img src="house gaming.png" alt="House Gaming">
+    <div class="contenedor">
+        <img src="house gaming.png" alt="House Gaming">
+    </div>
 
 </body>
 </html>
