@@ -3,21 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HouseGaming</title>
+    <title>Diseño Web</title>
     <style>
-        body {background:#000; color:#6cf; font-family:'Courier New',monospace; padding:30px 0; margin:0;}
-        .caja {width:80%; max-width:700px; margin:0 auto; border:2px solid #09f; padding:20px;}
-        img {width:100%; height:auto; margin-bottom:25px;}
-        h2 {text-align:center; font-size:28px; font-style:italic; margin:0 0 30px; letter-spacing:2px;}
-        p {line-height:1.6; font-size:16px; text-align:justify; margin-bottom:15px;}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* Tamaño total de la página */
+            width: 1534px;
+            height: 960px;
+            /* Fondo oscuro */
+            background-color: #0a0e17;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Barra lateral rosa */
+        .barra-lateral {
+            width: 40px;
+            height: 100%;
+            background-color: #f52080;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        /* Recuadro blanco */
+        .recuadro-blanco {
+            width: 280px;
+            height: 220px;
+            background-color: #ffffff;
+            border-radius: 12px; /* Esquinas redondeadas */
+            position: absolute;
+            left: 70px;
+            top: 40px;
+        }
     </style>
 </head>
 <body>
-    <div class="caja">
-        <img src="Captura de pantalla 2026-06-09 191017.png" alt="Imagen HouseGaming">
-        <h2>HouseGaming</h2>
-        <p>Ubicados estratégicamente en el barrio Intipungo, en la intersección de la avenida Cristóbal Colón y la calle Vicente Rocafuerte.</p>
-        <p>Ofrecemos una experiencia de entretenimiento de primer nivel. Contamos con un catálogo exclusivo de videojuegos de alta gama, cuidadosamente seleccionados y totalmente actualizados, para brindar a nuestros clientes la mejor calidad, rendimiento y diversión sin limites. A continuación, te invitamos a conocer toda nuestra oferta disponible.</p>
-    </div>
+    <div class="barra-lateral"></div>
+    <div class="recuadro-blanco"></div>
 </body>
 </html>
